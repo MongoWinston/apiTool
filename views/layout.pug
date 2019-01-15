@@ -1,7 +1,15 @@
 doctype html
 html
   head
-    title= title
+    title API tool
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='https://unpkg.com/purecss@1.0.0/build/pure-min.css', integrity='sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w', crossorigin='anonymous')
+    script(src='https://code.jquery.com/jquery-3.3.1.js', integrity='sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=', crossorigin='anonymous')
+    script(src='https://unpkg.com/axios/dist/axios.min.js')
   body
+
+    mixin textForm(identification, summary)
+      label(for=identification)=summary
+      input(id=identification class='credentialsParser' type='text')
+
     block content
